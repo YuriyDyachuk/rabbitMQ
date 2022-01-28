@@ -38,17 +38,3 @@ services:
     volumes:
       - .:/application
       - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini
-
-  rabbit:
-    image: "rabbitmq:3-management"
-    hostname: "rabbit"
-    environment:
-      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
-      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
-      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
-      RABBITMQ_DEFAULT_VHOST: ${RABBITMQ_VHOST}
-    ports:
-      - ${RABBITMQ_PORT_OUT}:${RABBITMQ_PORT_OUT}
-      - ${RABBITMQ_PORT}:${RABBITMQ_PORT}
-    labels:
-      NAME: "rabbitmq"
