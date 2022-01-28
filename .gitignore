@@ -13,3 +13,12 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+.discovery
+.DS_Store
+apidoc.json
+/public/apidoc
+storage/framework
+storage/fonts/*
+storage/media-library/*
+package-lock.json
+/docker/mysql/data
